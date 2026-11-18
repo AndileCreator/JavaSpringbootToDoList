@@ -40,15 +40,15 @@ public class TaskController {
         return ResponseEntity.ok(
                 taskService.getTaskById(id));
     }
-    @PutMapping("/{id}/status")
-    public ResponseEntity<TaskResponse> updateStatus(
+    @PutMapping("/{id}")
+    public ResponseEntity<TaskResponse> updateTask(
             @PathVariable Long id,
             @Valid @RequestBody TaskRequest taskRequest){
         return ResponseEntity.ok(
                 taskService.updateTask(id, taskRequest)
         );
     }
-    @DeleteMapping("/status")
+    @DeleteMapping("/{id}")
     public ResponseEntity<TaskResponse> deleteTask(
             @PathVariable Long id){
 
