@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.example.demo.enums.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,8 +22,9 @@ public class Task {
     @Column(name = "Task_Name", nullable = false)
     private String taskName;
 
-    @Column(name = "Status", nullable = false)
-    private String status;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Status status;
 
     @Column(name = "Due_date", nullable = false)
     private String dueDate;

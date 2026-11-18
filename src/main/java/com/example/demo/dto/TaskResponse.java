@@ -3,7 +3,7 @@ package com.example.demo.dto;
 public record TaskResponse(
         Long id,
         String taskName,
-        String status,
+        com.example.demo.enums.Status status,
         String dueDate
 ) {
 }
